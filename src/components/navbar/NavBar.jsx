@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import flagImage from "../../assets/images/flatImage.webp";
 
 export default function NavBar() {
   return (
@@ -6,14 +7,21 @@ export default function NavBar() {
       <nav className=" bg-white w-full flex relative justify-between items-center mx-auto px-8 h-20 border-2 border-gray-100">
         <div className="inline-flex">
           <a className="_o6689fn" href="/">
-            <div className="hidden md:block">
+            <div className="hidden md:block ">
               <svg
-                width={102}
-                height={32}
-                fill="currentcolor"
-                style={{ display: "block" }}
+                viewBox="0 0 97 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="90"
+                role="presentation"
+                alt=""
+                data-testid="NintendoRacetrackLogoIcon"
+                size="69"
+                color="currentColor"
               >
-                <path d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z" />
+                <path
+                  d="M17.945 14.157l-4.85-7.838H9.609V17.59h3.486V9.752l4.85 7.838h3.456V6.32h-3.486l.03 7.837zm27.554-4.04V8.993H43.68v-1.52h-3.395v1.52h-1.849v1.124h1.85v7.473h3.394v-7.473h1.82zM23.341 17.56h3.364v-7.474h-3.364v7.474zm0-8.932h3.395V6.319H23.34v2.309zm59.17.942c-2.728 0-4.941 1.883-4.941 4.192s2.213 4.193 4.94 4.193c2.729 0 4.942-1.884 4.942-4.193 0-2.309-2.213-4.192-4.941-4.192zm1.364 5.772c0 1.185-.698 1.67-1.364 1.67-.667 0-1.395-.485-1.395-1.67v-3.16c0-1.184.697-1.67 1.395-1.67.666 0 1.364.486 1.364 1.67v3.16zm-10.73-4.891c-.547-.304-1.123-.608-1.91-.669-2.426-.212-4.305 1.945-4.305 3.92 0 2.612 2 3.554 2.304 3.706 1.152.516 2.607.547 3.88-.274v.426h3.334V6.32h-3.334c.03 0 .03 2.4.03 4.13zm.03 3.342v1.336c0 1.155-.789 1.458-1.334 1.458-.546 0-1.334-.303-1.334-1.458v-2.673c0-1.155.788-1.458 1.334-1.458.515 0 1.333.303 1.333 1.458v1.337zM34.616 9.752c-1.122.03-2.031.516-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.607-1.367.909 0 1.546.73 1.546 1.367v4.922h3.364v-4.071c0-2.947-2.546-3.798-3.82-3.737zm27.433 0a4.075 4.075 0 0 0-2.698 1.124v-.79h-3.365v7.474h3.365v-4.922c0-.638.697-1.367 1.606-1.367.91 0 1.546.73 1.546 1.367v4.922h3.365v-4.071c0-2.947-2.546-3.798-3.82-3.737zm-7.063 4.101c0-2.309-2.243-4.253-4.971-4.253-2.759 0-4.972 1.884-4.972 4.193 0 2.308 2.213 4.192 4.972 4.192 2.273 0 4.213-1.306 4.789-3.068H51.44v.455c0 1.367-.91 1.671-1.394 1.671-.515 0-1.425-.304-1.425-1.67v-1.55l6.366.03zm-6.123-2.643a1.391 1.391 0 0 1 1.182-.668c.455 0 .91.213 1.182.668.212.365.212.82.212 1.458H48.62c0-.637.03-1.063.243-1.458zm39.921-3.493c0-.365-.272-.547-.818-.547h-.758v1.914h.455v-.79h.242l.364.79h.515l-.424-.851c.273-.091.424-.273.424-.516zm-.879.273h-.242v-.547h.212c.273 0 .424.091.424.274 0 .212-.12.273-.394.273zm.03-1.58c-.94 0-1.727.79-1.727 1.732s.788 1.732 1.728 1.732 1.727-.79 1.727-1.732a1.73 1.73 0 0 0-1.727-1.732zm0 3.13a1.413 1.413 0 0 1-1.394-1.398c0-.76.637-1.398 1.395-1.398.757 0 1.394.638 1.394 1.398 0 .76-.637 1.397-1.394 1.397zM84.148 0H12.64C5.062-.03 0 5.438 0 11.97c0 6.53 5.062 11.939 12.67 11.939h71.508c7.608 0 12.67-5.408 12.67-11.94C96.818 5.44 91.726 0 84.148 0zm-.03 20.993H12.671c-6.033.03-9.7-4.041-9.7-9.023 0-4.983 3.698-8.993 9.7-9.023h71.446c6.002 0 9.7 4.04 9.7 9.023 0 4.982-3.668 9.023-9.7 9.023z"
+                  fill="red"
+                ></path>
               </svg>
             </div>
             <div className="block md:hidden">
@@ -29,12 +37,12 @@ export default function NavBar() {
           </a>
 
           {/* search bar */}
-          <div className="hidden sm:block flex-shrink flex-grow-30 justify-start border-b md:ml-6 ">
+          <div className="hidden sm:block flex-shrink flex-grow-30 justify-start border-b hover:border-red-600 transition duration-300 ease-in-out md:ml-6 ">
             <div className="inline-block">
               <div className="inline-flex items-center max-w-full">
-                <div className="flex items-center justify-center relative  h-8 w-8 rounded-full">
+                <div className="flex items-center justify-center relative  h-8 w-8 rounded-full hover:text-red-600  text-gray-500">
                   <svg
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 22 22"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
                     role="presentation"
@@ -55,10 +63,10 @@ export default function NavBar() {
                   </svg>
                 </div>
                 <input
-                  placeholder=" Start your search"
+                  placeholder="  Search"
                   className="outline-none block flex-grow flex-shrink overflow-hidden w-96"
                 />
-                <div className="flex items-center justify-center relative   rounded-full">
+                <div className="flex items-center font-semibold text-gray-600 justify-center relative  hover:text-red-600 transition duration-500 ease-in-out  rounded-full">
                   All Categories
                 </div>
               </div>
@@ -70,11 +78,8 @@ export default function NavBar() {
         <div className="flex-initial">
           <div className="flex justify-end items-center relative">
             <div className="flex mr-4 items-center">
-              <a
-                className="inline-block py-2 px-3 hover:bg-gray-200 rounded-full"
-                href="#"
-              >
-                <div className="inline-flex items-center relative cursor-pointer whitespace-nowrap">
+              <a className="inline-block py-2 px-3  rounded-full" href="#">
+                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 32 32"
@@ -94,11 +99,8 @@ export default function NavBar() {
                   <p className="ml-2">Support</p>
                 </div>
               </a>
-              <a
-                className="inline-block py-2 px-3 hover:bg-gray-200 rounded-full"
-                href="#"
-              >
-                <div className="inline-flex items-center relative cursor-pointer whitespace-nowrap">
+              <a className="inline-block py-2 px-3  rounded-full" href="#">
+                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 32 32"
@@ -119,11 +121,8 @@ export default function NavBar() {
                   <p className="ml-2">Wish List</p>
                 </div>
               </a>
-              <a
-                className="inline-block py-2 px-3 hover:bg-gray-200 rounded-full"
-                href="#"
-              >
-                <div className="inline-flex items-center relative cursor-pointer whitespace-nowrap">
+              <a className="inline-block py-2 px-3  rounded-full" href="#">
+                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
                   <svg
                     data-name="Shopping cart"
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,11 +142,8 @@ export default function NavBar() {
                   <p className="ml-2">Cart</p>
                 </div>
               </a>
-              <a
-                className="inline-block py-2 px-3 hover:bg-gray-200 rounded-full"
-                href="#"
-              >
-                <div className="inline-flex items-center relative cursor-pointer whitespace-nowrap">
+              <a className="inline-block py-2 px-3  rounded-full" href="#">
+                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 32 32"
@@ -175,10 +171,7 @@ export default function NavBar() {
                 >
                   <div className="pl-1"></div>
                   <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-10 w-12 pl-5">
-                    <img
-                      src="https://assets.nintendo.com/image/upload/c_scale,w_24,q_auto/ncom/global/flags-change-region/FlagUsaIconRegionSelect.webp"
-                      alt=""
-                    />
+                    <img src={flagImage} alt="" />
                   </div>
                 </button>
               </div>
