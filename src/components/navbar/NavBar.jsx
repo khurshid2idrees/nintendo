@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import flagImage from "../../assets/images/flatImage.webp";
 import { NavbarData } from "../../data";
 import { Link } from "react-router-dom";
+import useHover from "../../customHooks/useHover";
 
 export default function NavBar() {
   const [categories, setCategories] = useState(null);
 
   const data = NavbarData[0].categoriess;
-
-  console.log(data);
 
   return (
     <>
@@ -75,38 +74,32 @@ export default function NavBar() {
                   className="outline-none block flex-grow flex-shrink overflow-hidden w-96"
                 />
                 <div
-                  className={` flex items-center font-normal text-gray-600 justify-center relative  hover:text-red-600 transition duration-500 ease-in-out  rounded-full`}
+                  className={`group flex items-center font-normal text-gray-600 justify-center relative  hover:text-red-600 transition duration-500 ease-in-out  rounded-full`}
                 >
                   All Categories
-                </div>
-                {/* kd start   */}
-                {categories ? (
-                  <>
-                    <div className="min-h-screen flex items-center justify-center">
-                      <div className="relative group">
-                        <div
-                          id="dropdown-menu"
-                          className=" absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1"
-                        >
-                          {/* Dropdown content goes here */}
-                          {data.map((dropdown) => {
-                            return (
-                              <>
-                                <div
-                                  key={dropdown.id}
-                                  className="block md:text-[14px] font-semibold px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-                                >
-                                  {dropdown.name}
-                                </div>
-                              </>
-                            );
-                          })}
-                        </div>
+                  <div className="invisible group-hover:visible   min-h-screen flex items-center justify-center">
+                    <div className="relative group">
+                      <div
+                        id="dropdown-menu"
+                        className=" absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1"
+                      >
+                        {/* Dropdown content goes here */}
+                        {data.map((dropdown) => {
+                          return (
+                            <>
+                              <div
+                                key={dropdown.id}
+                                className="block md:text-[14px] font-semibold px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+                              >
+                                {dropdown.name}
+                              </div>
+                            </>
+                          );
+                        })}
                       </div>
                     </div>
-                  </>
-                ) : null}
-                {/* kd  end  */}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
