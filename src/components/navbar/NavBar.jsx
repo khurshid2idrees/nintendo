@@ -214,11 +214,18 @@ export default function NavBar() {
         <div className="z-20  absolute bg-white  w-screen shadow-xl    mt-60">
           {/* trending topics start */}
           <div className="mx-32">
-            <h1>Trending topics</h1>
+            <h1 className="text-gray-700 py-3 font-sans font-bold md:text-base ">
+              Trending topics
+            </h1>
             <div>
               <div>
-                <p className="text-[#e60012] font-sans font-bold md:text-base font-">
-                  Nintendo switch - OLED Model: Mario Red Edition
+                <p className="text-[#e60012] py-1 font-sans font-bold md:text-base ">
+                  Nintendo Switch - OLED Model: Mario Red Edition
+                </p>
+              </div>
+              <div>
+                <p className="text-[#e60012] py-1 font-sans font-bold md:text-base ">
+                  Nintendo Switch
                 </p>
               </div>
             </div>
