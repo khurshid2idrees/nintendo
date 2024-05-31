@@ -6,12 +6,13 @@ import useHover from "../../customHooks/useHover";
 
 export default function NavBar() {
   const [categories, setCategories] = useState(null);
+  const [SearchExp, setSearchExp] = useState(null);
 
   const data = NavbarData[0].categoriess;
 
   return (
     <>
-      <nav className=" bg-white w-full flex relative justify-between items-center mx-auto px-8 h-20 border-2 border-gray-100">
+      <nav className=" z-0  bg-white w-full flex relative justify-between items-center mx-auto  h-20 border-2 border-gray-100">
         <div className="inline-flex">
           <a className="_o6689fn" href="/">
             <div className="hidden md:block ">
@@ -44,7 +45,7 @@ export default function NavBar() {
           </a>
 
           {/* search bar */}
-          <div className="hidden sm:block flex-shrink flex-grow-30 justify-start border-b hover:border-red-600 transition duration-300 ease-in-out md:ml-6 ">
+          <div className="hidden sm:block flex-shrink  flex-grow-30 justify-start  transition duration-300 ease-in-out md:ml-6 ">
             <div className="inline-block">
               <div className="inline-flex items-center max-w-full">
                 <div className="flex items-center justify-center relative  h-8 w-8 rounded-full hover:text-red-600  text-gray-500">
@@ -71,7 +72,7 @@ export default function NavBar() {
                 </div>
                 <input
                   placeholder="  Search"
-                  className="outline-none block flex-grow flex-shrink overflow-hidden w-96"
+                  className="outline-none block border-b hover:border-red-600 flex-grow flex-shrink overflow-hidden w-96"
                 />
                 <div
                   className={`group flex items-center font-normal text-gray-600 justify-center relative  hover:text-red-600 transition duration-500 ease-in-out  rounded-full`}
@@ -208,6 +209,25 @@ export default function NavBar() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="z-20  absolute bg-white  w-screen shadow-xl    mt-60">
+          {/* trending topics start */}
+          <div className="mx-32">
+            <h1>Trending topics</h1>
+            <div>
+              <div>
+                <p className="text-[#e60012] font-sans font-bold md:text-base font-">
+                  Nintendo switch - OLED Model: Mario Red Edition
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* trending topics end */}
+
+          {/* top store products start  */}
+          <div></div>
+          {/* top store products end */}
         </div>
       </nav>
     </>
