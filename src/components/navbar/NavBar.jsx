@@ -8,7 +8,7 @@ export default function NavBar() {
   const [categories, setCategories] = useState(null);
   const [SearchExp, setSearchExp] = useState(null);
 
-  const data = NavbarData[0].categoriess;
+  const data = NavbarData;
 
   return (
     <>
@@ -85,7 +85,7 @@ export default function NavBar() {
                         className=" absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1"
                       >
                         {/* Dropdown content goes here */}
-                        {data.map((dropdown) => {
+                        {data[0].categoriess.map((dropdown) => {
                           return (
                             <>
                               <div
@@ -211,29 +211,33 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className="z-20  absolute bg-white  w-screen shadow-xl    mt-60">
+        <div className="z-20 flex md:flex-row flex-col  absolute bg-white  w-screen shadow-xl    mt-96">
           {/* trending topics start */}
-          <div className="mx-32">
-            <h1 className="text-gray-700 py-3 font-sans font-bold md:text-base ">
+          <div className="mx-32 ">
+            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-base ">
               Trending topics
             </h1>
-            <div>
-              <div>
-                <p className="text-[#e60012] py-1 font-sans font-bold md:text-base ">
-                  Nintendo Switch - OLED Model: Mario Red Edition
-                </p>
-              </div>
-              <div>
-                <p className="text-[#e60012] py-1 font-sans font-bold md:text-base ">
-                  Nintendo Switch
-                </p>
-              </div>
+            <div className="pb-32 mt-2">
+              {data[0].trending.map((trend) => {
+                return (
+                  <div key={trend.id}>
+                    <p className="text-[#e60012] py-1 font-sans tracking-wider font-bold md:text-base ">
+                      {trend.text}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
           {/* trending topics end */}
 
           {/* top store products start  */}
-          <div></div>
+          <div>
+            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-base ">
+              Trending topics
+            </h1>{" "}
+            <div></div>
+          </div>
           {/* top store products end */}
         </div>
       </nav>

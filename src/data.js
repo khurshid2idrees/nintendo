@@ -26,5 +26,27 @@ export const NavbarData = [
         name: "Support",
       },
     ],
+    trending: [
+      {
+        id: 1,
+        text: `Nintendo Switch - OLED Model: Mario Red Edition`,
+      },
+      {
+        id: 2,
+        text: `Nintendo Switch`,
+      },
+      {
+        id: 3,
+        text: `Super Mario Bros. Wonder`,
+      },
+      {
+        id: 4,
+        text: `Nintendo Switch games`,
+      },
+      {
+        id: 5,
+        text: `Zelda games`,
+      },
+    ],
   },
 ];
