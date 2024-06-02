@@ -3,6 +3,7 @@ import flagImage from "../../assets/images/flatImage.webp";
 import { NavbarData } from "../../data";
 import { Link } from "react-router-dom";
 import useHover from "../../customHooks/useHover";
+import nintendo from '../../assets/images/navbar/nintendo.avif'
 
 export default function NavBar() {
   const [categories, setCategories] = useState(null);
@@ -233,10 +234,38 @@ export default function NavBar() {
 
           {/* top store products start  */}
           <div>
-            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-base ">
-              Trending topics
+            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-[1.1rem] ">
+              Top store products
             </h1>{" "}
-            <div></div>
+            <div>
+              <div>
+                <div>
+
+                  <div className="flex border-gray-100 px-4 rounded-xl border-2">
+                    <div>
+                      <img width={120} src={nintendo} alt="" />
+                    </div>
+                    <div className="flex flex-col justify-between">
+                      <h1>Super Mario Bros. Wonder</h1>
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <p>Hardware</p>
+                        </div>
+                        <div>
+                          icon
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <div></div>
+              </div>
+
+              <div></div>
+            </div>
           </div>
           {/* top store products end */}
         </div>

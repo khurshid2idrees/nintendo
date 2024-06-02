@@ -1,3 +1,6 @@
+// import navbar images here 
+import nintendo from './assets/images/navbar/nintendo.avif';
+
 export const NavbarData = [
   {
     categoriess: [
@@ -48,5 +51,13 @@ export const NavbarData = [
         text: `Zelda games`,
       },
     ],
+    top_products:[
+      {
+        id:1,
+        img:nintendo,
+        title:`Nintendo Switch - OLED Model - Mario Red Edition`,
+        description:`Hardware`
+      }
+    ]
   },
 ];
