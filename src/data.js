@@ -1,5 +1,5 @@
-// import navbar images here 
-import nintendo from './assets/images/navbar/nintendo.avif';
+// import navbar images here
+import nintendo from "./assets/images/navbar/nintendo.avif";
 
 export const NavbarData = [
   {
@@ -51,13 +51,31 @@ export const NavbarData = [
         text: `Zelda games`,
       },
     ],
-    top_products:[
+    top_products: [
       {
-        id:1,
-        img:nintendo,
-        title:`Nintendo Switch - OLED Model - Mario Red Edition`,
-        description:`Hardware`
-      }
-    ]
+        id: 1,
+        img: nintendo,
+        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        description: `Hardware`,
+      },
+      {
+        id: 2,
+        img: nintendo,
+        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        description: `Hardware`,
+      },
+      {
+        id: 3,
+        img: nintendo,
+        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        description: `Hardware`,
+      },
+      {
+        id: 4,
+        img: nintendo,
+        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        description: `Hardware`,
+      },
+    ],
   },
 ];
