@@ -6,8 +6,7 @@ import useHover from "../../customHooks/useHover";
 import nintendo from "../../assets/images/navbar/nintendo.avif";
 
 export default function NavBar() {
-  const [categories, setCategories] = useState(null);
-  const [SearchExp, setSearchExp] = useState(null);
+  const [trendingtoggle, setTrendingtoggle] = useState(false);
 
   const data = NavbarData;
 
@@ -72,6 +71,7 @@ export default function NavBar() {
                   </svg>
                 </div>
                 <input
+                  onClick={() => setTrendingtoggle(!trendingtoggle)}
                   placeholder="  Search"
                   className="outline-none block border-b hover:border-red-600 flex-grow flex-shrink overflow-hidden w-96"
                 />
@@ -108,218 +108,256 @@ export default function NavBar() {
         </div>
         {/* end logo */}
 
-        <div className="flex-initial">
-          <div className="flex justify-end items-center relative">
-            <div className="flex mr-4 items-center">
-              <a className="inline-block py-2 px-3  rounded-full" href="#">
-                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    width="18"
-                    role="presentation"
-                    alt=""
-                    data-testid="SupportIcon"
-                    size="18"
-                    color="currentColor"
-                  >
-                    <path
-                      d="M28.126.862H3.876A3.904 3.904 0 0 0 0 4.757v17.838a3.905 3.905 0 0 0 3.875 3.896h8.375c.125 0 .125 0 .125.125l3.626 4.397a.122.122 0 0 0 .125.125c.125 0 .125 0 .25-.125L20 26.616a.122.122 0 0 1 .124-.125h8.001A3.904 3.904 0 0 0 32 22.595V4.757A3.903 3.903 0 0 0 28.126.862zM17.954 20.91a2.018 2.018 0 0 1-.438.64 2.062 2.062 0 0 1-1.446.58 2.092 2.092 0 0 1-.802-.154 1.944 1.944 0 0 1-.652-.43 1.98 1.98 0 0 1-.427-.642 2.119 2.119 0 0 1-.001-1.59 1.97 1.97 0 0 1 .43-.65 2.055 2.055 0 0 1 .643-.432 2.078 2.078 0 0 1 1.613 0 2.152 2.152 0 0 1 .64.428l.002.001a2.045 2.045 0 0 1 .438 2.25zm2.964-10.055a4.505 4.505 0 0 1-.662 1.159 5.04 5.04 0 0 1-.861.844l-.822.622a6.01 6.01 0 0 0-.626.538.766.766 0 0 0-.231.426l-.303 1.923h-2.517l-.222-2.13a1.824 1.824 0 0 1 .193-1.127 3.152 3.152 0 0 1 .648-.812 7.965 7.965 0 0 1 .838-.658 6.94 6.94 0 0 0 .782-.626 3.116 3.116 0 0 0 .574-.716 1.726 1.726 0 0 0 .208-.873 1.287 1.287 0 0 0-.112-.55 1.213 1.213 0 0 0-.318-.414 1.482 1.482 0 0 0-.506-.275 2.946 2.946 0 0 0-1.628.018 3.595 3.595 0 0 0-.666.277 8.824 8.824 0 0 0-.49.294.966.966 0 0 1-1.483-.33l-.872-1.378.24-.212a8 8 0 0 1 .86-.657 6.234 6.234 0 0 1 1.023-.55 6.4 6.4 0 0 1 1.192-.37 6.63 6.63 0 0 1 3.248.15 4.301 4.301 0 0 1 1.475.826 3.736 3.736 0 0 1 .966 1.314 4.161 4.161 0 0 1 .34 1.703 4.304 4.304 0 0 1-.268 1.584z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <p className="ml-2">Support</p>
-                </div>
-              </a>
-              <a className="inline-block py-2 px-3  rounded-full" href="#">
-                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    width="18"
-                    role="presentation"
-                    alt=""
-                    data-testid="HeartIcon"
-                    size="18"
-                    color="currentColor"
-                  >
-                    <path
-                      d="M22.3 1.3c-2.3 0-4.5 1-6.3 2.8-1.7-1.8-3.9-2.8-6.3-2.8C4.4 1.3 0 5.7 0 11.2c0 2.6 1.2 5.1 3.3 7.3L15 30.2c.3.3.6.4 1 .4.3 0 .7-.1 1-.4l11.6-11.6c1.5-1.8 3.3-4.3 3.3-7.5.1-5.4-4.3-9.8-9.6-9.8z"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                  <p className="ml-2">Wish List</p>
-                </div>
-              </a>
-              <a className="inline-block py-2 px-3  rounded-full" href="#">
-                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
-                  <svg
-                    data-name="Shopping cart"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    width="20"
-                    role="presentation"
-                    alt=""
-                    data-testid="ShoppingCartIcon"
-                    size="20"
-                    color="currentColor"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M23.12 28.073a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326zm2.397-7.29a1.728 1.728 0 0 0 1.498-.982l4.844-11.686a1.544 1.544 0 0 0-.15-1.551 1.593 1.593 0 0 0-1.349-.673H8.44l-.55-2.895A1.494 1.494 0 0 0 6.393 1.6H1.598A1.606 1.606 0 0 0 0 3.255a1.548 1.548 0 0 0 1.598 1.654h3.496L7.49 18.973l-1.098 4.706a1.67 1.67 0 0 0 .25 1.395 1.529 1.529 0 0 0 1.198.673h18.675a1.656 1.656 0 0 0 0-3.31H9.937l.4-1.654zm-18.726 7.29a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326z"
-                    ></path>
-                  </svg>
-                  <p className="ml-2">Cart</p>
-                </div>
-              </a>
-              <a className="inline-block py-2 px-3  rounded-full" href="#">
-                <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    width="18"
-                    role="presentation"
-                    alt=""
-                    data-testid="UserIcon"
-                    size="18"
-                    color="currentColor"
-                  >
-                    <path
-                      d="M16.22 19.41A9.71 9.71 0 1 1 26 9.7a9.74 9.74 0 0 1-9.8 9.71M1.84 32a10.88 10.88 0 0 1 10.94-10.74h6.57A10.88 10.88 0 0 1 30.29 32H1.84"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                  <p className="ml-2">Log in / Sign up</p>
-                </div>
-              </a>
+        {trendingtoggle ? (
+          <>
+            <div
+              onClick={() => setTrendingtoggle(!trendingtoggle)}
+              className="mx-8 cursor-pointer"
+            >
+              <svg
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                role="presentation"
+                alt=""
+                data-testid="CloseCircleIcon"
+                size="24"
+                color="currentColor"
+              >
+                <path
+                  d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm5.735 8L16 13.735 10.265 8 8 10.265 13.735 16 8 21.735 10.265 24 16 18.265 21.735 24 24 21.735 18.265 16 24 10.265 21.735 8z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
             </div>
-            <div className="block">
-              <div className="inline relative">
-                <button
-                  type="button"
-                  className="inline-flex items-center relative px-2"
-                >
-                  <div className="pl-1"></div>
-                  <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-10 w-12 pl-5">
-                    <img src={flagImage} alt="" />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="z-20 flex md:flex-row flex-col  absolute bg-white  w-screen shadow-xl    mt-96">
-          {/* trending topics start */}
-          <div className="mx-32 ">
-            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-base ">
-              Trending topics
-            </h1>
-            <div className="pb-32 mt-2">
-              {data[0].trending.map((trend) => {
-                return (
-                  <div key={trend.id}>
-                    <p className="text-[#e60012] py-1 font-sans tracking-wider font-bold md:text-base ">
-                      {trend.text}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          {/* trending topics end */}
-
-          {/* top store products start  */}
-          <div>
-            <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-[1.1rem] ">
-              Top store products
-            </h1>{" "}
-            <div>
-              <div className="flex flex-wrap">
-               {data[0].top_products.map((product)=>{
-                return (
-                  <div className="p-2" key={product.id}>
-                  <div className="flex border-gray-100 px-4 py-2 rounded-xl border-2">
-                    <div>
-                      <img width={140} src={nintendo} alt="" />
+          </>
+        ) : (
+          <>
+            <div className="flex-initial">
+              <div className="flex justify-end items-center relative">
+                <div className="flex mr-4 items-center">
+                  <a className="inline-block py-2 px-3  rounded-full" href="#">
+                    <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="18"
+                        role="presentation"
+                        alt=""
+                        data-testid="SupportIcon"
+                        size="18"
+                        color="currentColor"
+                      >
+                        <path
+                          d="M28.126.862H3.876A3.904 3.904 0 0 0 0 4.757v17.838a3.905 3.905 0 0 0 3.875 3.896h8.375c.125 0 .125 0 .125.125l3.626 4.397a.122.122 0 0 0 .125.125c.125 0 .125 0 .25-.125L20 26.616a.122.122 0 0 1 .124-.125h8.001A3.904 3.904 0 0 0 32 22.595V4.757A3.903 3.903 0 0 0 28.126.862zM17.954 20.91a2.018 2.018 0 0 1-.438.64 2.062 2.062 0 0 1-1.446.58 2.092 2.092 0 0 1-.802-.154 1.944 1.944 0 0 1-.652-.43 1.98 1.98 0 0 1-.427-.642 2.119 2.119 0 0 1-.001-1.59 1.97 1.97 0 0 1 .43-.65 2.055 2.055 0 0 1 .643-.432 2.078 2.078 0 0 1 1.613 0 2.152 2.152 0 0 1 .64.428l.002.001a2.045 2.045 0 0 1 .438 2.25zm2.964-10.055a4.505 4.505 0 0 1-.662 1.159 5.04 5.04 0 0 1-.861.844l-.822.622a6.01 6.01 0 0 0-.626.538.766.766 0 0 0-.231.426l-.303 1.923h-2.517l-.222-2.13a1.824 1.824 0 0 1 .193-1.127 3.152 3.152 0 0 1 .648-.812 7.965 7.965 0 0 1 .838-.658 6.94 6.94 0 0 0 .782-.626 3.116 3.116 0 0 0 .574-.716 1.726 1.726 0 0 0 .208-.873 1.287 1.287 0 0 0-.112-.55 1.213 1.213 0 0 0-.318-.414 1.482 1.482 0 0 0-.506-.275 2.946 2.946 0 0 0-1.628.018 3.595 3.595 0 0 0-.666.277 8.824 8.824 0 0 0-.49.294.966.966 0 0 1-1.483-.33l-.872-1.378.24-.212a8 8 0 0 1 .86-.657 6.234 6.234 0 0 1 1.023-.55 6.4 6.4 0 0 1 1.192-.37 6.63 6.63 0 0 1 3.248.15 4.301 4.301 0 0 1 1.475.826 3.736 3.736 0 0 1 .966 1.314 4.161 4.161 0 0 1 .34 1.703 4.304 4.304 0 0 1-.268 1.584z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <p className="ml-2">Support</p>
                     </div>
-                    <div className="flex flex-col justify-between">
-                      <h1 className="text-gray-700 pt-3 max-w-[14rem] font-sans font-semibold md:text-base">
-                        Nintendo Switch - OLED Model - Mario Red Edition
-                      </h1>
-                      <div className="flex justify-between items-end">
-                        <div>
-                          <p>
-                            {" "}
-                            <span className="text-blue-800 font-bold">
-                              |
-                            </span>{" "}
-                            Hardware
-                          </p>
-                        </div>
-                        <div>
-                          <svg
-                            viewBox="0 0 54 54"
-                            fill="red"
-                            stroke="currentColor"
-                            width="24"
-                            role="presentation"
-                            alt=""
-                            data-testid="heartspark"
-                            color="currentColor"
-                            size="24"
-                          >
-                            <g class="hearts">
-                              <path
-                                class="heart heart-outline"
-                                d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                              ></path>
-                              <path
-                                class="heart heart-filled"
-                                d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                              ></path>
-                            </g>
-                            <g class="sparks">
-                              <path
-                                class="spark"
-                                d="M27 8V0M27 46v8"
-                                stroke-width="2"
-                              ></path>
-                              <path
-                                class="spark"
-                                d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                                stroke-width="1.99998"
-                              ></path>
-                              <path
-                                class="spark"
-                                d="M46 27h8M8 27H0"
-                                stroke-width="2"
-                              ></path>
-                              <path
-                                class="spark"
-                                d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                                stroke-width="1.99998"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
+                  </a>
+                  <a className="inline-block py-2 px-3  rounded-full" href="#">
+                    <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="18"
+                        role="presentation"
+                        alt=""
+                        data-testid="HeartIcon"
+                        size="18"
+                        color="currentColor"
+                      >
+                        <path
+                          d="M22.3 1.3c-2.3 0-4.5 1-6.3 2.8-1.7-1.8-3.9-2.8-6.3-2.8C4.4 1.3 0 5.7 0 11.2c0 2.6 1.2 5.1 3.3 7.3L15 30.2c.3.3.6.4 1 .4.3 0 .7-.1 1-.4l11.6-11.6c1.5-1.8 3.3-4.3 3.3-7.5.1-5.4-4.3-9.8-9.6-9.8z"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                      <p className="ml-2">Wish List</p>
+                    </div>
+                  </a>
+                  <a className="inline-block py-2 px-3  rounded-full" href="#">
+                    <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
+                      <svg
+                        data-name="Shopping cart"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="20"
+                        role="presentation"
+                        alt=""
+                        data-testid="ShoppingCartIcon"
+                        size="20"
+                        color="currentColor"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M23.12 28.073a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326zm2.397-7.29a1.728 1.728 0 0 0 1.498-.982l4.844-11.686a1.544 1.544 0 0 0-.15-1.551 1.593 1.593 0 0 0-1.349-.673H8.44l-.55-2.895A1.494 1.494 0 0 0 6.393 1.6H1.598A1.606 1.606 0 0 0 0 3.255a1.548 1.548 0 0 0 1.598 1.654h3.496L7.49 18.973l-1.098 4.706a1.67 1.67 0 0 0 .25 1.395 1.529 1.529 0 0 0 1.198.673h18.675a1.656 1.656 0 0 0 0-3.31H9.937l.4-1.654zm-18.726 7.29a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326z"
+                        ></path>
+                      </svg>
+                      <p className="ml-2">Cart</p>
+                    </div>
+                  </a>
+                  <a className="inline-block py-2 px-3  rounded-full" href="#">
+                    <div className="inline-flex items-center hover:text-[#e60012] transition duration-300 ease-in-out relative cursor-pointer whitespace-nowrap">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="18"
+                        role="presentation"
+                        alt=""
+                        data-testid="UserIcon"
+                        size="18"
+                        color="currentColor"
+                      >
+                        <path
+                          d="M16.22 19.41A9.71 9.71 0 1 1 26 9.7a9.74 9.74 0 0 1-9.8 9.71M1.84 32a10.88 10.88 0 0 1 10.94-10.74h6.57A10.88 10.88 0 0 1 30.29 32H1.84"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                      <p className="ml-2">Log in / Sign up</p>
+                    </div>
+                  </a>
+                </div>
+                <div className="block">
+                  <div className="inline relative">
+                    <button
+                      type="button"
+                      className="inline-flex items-center relative px-2"
+                    >
+                      <div className="pl-1"></div>
+                      <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-10 w-12 pl-5">
+                        <img src={flagImage} alt="" />
                       </div>
-                    </div>
+                    </button>
                   </div>
                 </div>
-                )
-               })}
-                <div></div>
               </div>
-
-              <div></div>
             </div>
-          </div>
-          {/* top store products end */}
-        </div>
+          </>
+        )}
+
+        {/* trending topics section  */}
+
+        {trendingtoggle ? (
+          <>
+            <div className="z-20 flex md:flex-row flex-col  absolute bg-white  w-screen shadow-xl    mt-96">
+              {/* trending topics start */}
+              <div className="mx-32 ">
+                <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-base ">
+                  Trending topics
+                </h1>
+                <div className="pb-32 mt-2">
+                  {data[0].trending.map((trend) => {
+                    return (
+                      <div key={trend.id}>
+                        <p className="text-[#e60012] py-1 font-sans tracking-wider font-bold md:text-base ">
+                          {trend.text}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* trending topics end */}
+
+              {/* top store products start  */}
+              <div>
+                <h1 className="text-gray-700 pt-3 font-sans font-bold md:text-[1.1rem] ">
+                  Top store products
+                </h1>{" "}
+                <div>
+                  <div className="flex flex-wrap">
+                    {data[0].top_products.map((product) => {
+                      return (
+                        <div className="p-2" key={product.id}>
+                          <div className="flex border-gray-100 px-4 py-2 rounded-xl border-2">
+                            <div>
+                              <img width={140} src={nintendo} alt="" />
+                            </div>
+                            <div className="flex flex-col justify-between">
+                              <h1 className="text-gray-700 pt-3 max-w-[14rem] font-sans font-semibold md:text-base">
+                                Nintendo Switch - OLED Model - Mario Red Edition
+                              </h1>
+                              <div className="flex justify-between items-end">
+                                <div>
+                                  <p>
+                                    {" "}
+                                    <span className="text-blue-800 font-bold">
+                                      |
+                                    </span>{" "}
+                                    Hardware
+                                  </p>
+                                </div>
+                                <div>
+                                  <svg
+                                    viewBox="0 0 54 54"
+                                    fill="red"
+                                    stroke="currentColor"
+                                    width="24"
+                                    role="presentation"
+                                    alt=""
+                                    data-testid="heartspark"
+                                    color="currentColor"
+                                    size="24"
+                                  >
+                                    <g class="hearts">
+                                      <path
+                                        class="heart heart-outline"
+                                        d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                                      ></path>
+                                      <path
+                                        class="heart heart-filled"
+                                        d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                                      ></path>
+                                    </g>
+                                    <g class="sparks">
+                                      <path
+                                        class="spark"
+                                        d="M27 8V0M27 46v8"
+                                        stroke-width="2"
+                                      ></path>
+                                      <path
+                                        class="spark"
+                                        d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                                        stroke-width="1.99998"
+                                      ></path>
+                                      <path
+                                        class="spark"
+                                        d="M46 27h8M8 27H0"
+                                        stroke-width="2"
+                                      ></path>
+                                      <path
+                                        class="spark"
+                                        d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                                        stroke-width="1.99998"
+                                      ></path>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div></div>
+                  </div>
+
+                  <div></div>
+                </div>
+              </div>
+              {/* top store products end */}
+
+              {/* exit button start */}
+
+              {/* exit button end */}
+            </div>
+          </>
+        ) : null}
       </nav>
     </>
   );
