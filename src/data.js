@@ -1,5 +1,8 @@
 // import navbar images here
 import nintendo from "./assets/images/navbar/nintendo.avif";
+import nintendo_two from "./assets/images/navbar/nintendo_two.jpg";
+import nintendo_three from "./assets/images/navbar/nintendo_three.jpg";
+import nintendo_four from "./assets/images/navbar/nintendo_four.jpg";
 
 export const NavbarData = [
   {
@@ -60,20 +63,20 @@ export const NavbarData = [
       },
       {
         id: 2,
-        img: nintendo,
-        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        img: nintendo_two,
+        title: `Super Mario Bros. Wonder`,
         description: `Hardware`,
       },
       {
         id: 3,
-        img: nintendo,
-        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        img: nintendo_three,
+        title: `Super Mario RPG`,
         description: `Hardware`,
       },
       {
         id: 4,
-        img: nintendo,
-        title: `Nintendo Switch - OLED Model - Mario Red Edition`,
+        img: nintendo_four,
+        title: `WarioWare. Move It!`,
         description: `Hardware`,
       },
     ],
